@@ -1,13 +1,16 @@
 [project]
 name = "virta-e2e"
 version = "0.1.0"
-description = "Add your description here"
+description = "E2E Data pipeline project"
 readme = "README.md"
 authors = [
     { name = "Antti Aalto", email = "antti.johannes.aalto@student.laurea.fi" }
 ]
 requires-python = ">=3.12"
-dependencies = []
+dependencies = [
+    "requests>=2.34.2",
+    "ruff>=0.17.3",
+]
 
 [project.scripts]
 virta-e2e = "virta_e2e:main"
