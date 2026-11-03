@@ -20,3 +20,6 @@ wheels/
 
 # macOS
 .DS_Store
+
+# Personal notes
+notes.me
