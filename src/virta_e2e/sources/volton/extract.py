@@ -1,6 +1,5 @@
 import json
 from datetime import datetime, timezone
-from pathlib import Path
 import requests
 from virta_e2e.config import API_URL, RAW_DATA_DIR, HEADERS
 
@@ -34,6 +33,3 @@ def extract_data() -> dict:
     print(f"Raw data saved: {file_path}")
 
     return data
-
-if __name__ == "__main__":
-    extract_data()

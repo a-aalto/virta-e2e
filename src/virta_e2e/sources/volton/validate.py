@@ -1,5 +1,4 @@
 from datetime import datetime
-from virta_e2e.sources.volton.extract import extract_data
 
 # Validate the rawdata structure from extract stage's API call
 def validate_raw_data(data: dict) -> None:
@@ -51,7 +50,3 @@ def validate_raw_data(data: dict) -> None:
             raise ValueError(f"Row {index} has an invalid price.")
 
     print(f"Validation successfull: {len(rows)} rows.")
-
-if __name__ == "__main__":
-    data = extract_data()
-    validate_raw_data(data)
