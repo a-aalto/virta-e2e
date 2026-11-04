@@ -27,5 +27,6 @@ notes.me
 # Raw Data from API
 data/raw/*
 
-# db
+# SQLite
 data/*.db
+data/*.db-*
