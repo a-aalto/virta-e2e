@@ -6,12 +6,6 @@ dist/
 wheels/
 *.egg-info
 
-# uv
-.python-version
-
-# db
-data/*.db
-
 # Environment variables
 .env
 .env.*
@@ -32,3 +26,6 @@ notes.me
 
 # Raw Data from API
 data/raw/*
+
+# db
+data/*.db
