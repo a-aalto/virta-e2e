@@ -9,7 +9,7 @@ API_URL = "https://public-data.volton.energy/v1/day-ahead-spot-fi/latest.json"
 
 # Data storage destinations
 RAW_DATA_DIR = PROJECT_ROOT / "data" / "raw"
-DATABASE_PATH = PROJECT_ROOT / "data" / "virta.e2e.db"
+DATABASE_PATH = PROJECT_ROOT / "data" / "virta_e2e.db"
 
 # HTTP header for API calls
 HEADERS = {
