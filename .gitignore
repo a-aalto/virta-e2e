@@ -23,3 +23,6 @@ wheels/
 
 # Personal notes
 notes.me
+
+# Raw Data from API
+data/raw/*
