@@ -6,6 +6,12 @@ dist/
 wheels/
 *.egg-info
 
+# uv
+.python-version
+
+# db
+data/*.db
+
 # Environment variables
 .env
 .env.*
