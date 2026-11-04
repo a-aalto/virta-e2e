@@ -3,6 +3,7 @@ from datetime import datetime, timezone
 import requests
 from virta_e2e.config import API_URL, RAW_DATA_DIR, HEADERS
 
+
 # Get electricity spot price from Volton API
 def extract_data() -> dict:
 

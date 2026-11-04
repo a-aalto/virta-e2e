@@ -1,11 +1,12 @@
 from datetime import datetime
 
+
 # Validate the rawdata structure from extract stage's API call
 def validate_raw_data(data: dict) -> None:
 
     # Check if data is dict
     if not isinstance(data, dict):
-        raise ValueError("API response must be a dictionary.")
+        raise TypeError("API response must be a dictionary.")
 
     if "rows" not in data:
         raise ValueError("API response is missing 'rows'.")
@@ -14,7 +15,7 @@ def validate_raw_data(data: dict) -> None:
 
     # Check if 'rows' is type list
     if not isinstance(rows, list):
-        raise ValueError("'rows' must be a list.")
+        raise TypeError("'rows' must be a list.")
 
     # Check if rows is null or not
     if not rows:
@@ -23,7 +24,7 @@ def validate_raw_data(data: dict) -> None:
     # Iterate the rows elements and check their data types and the data
     for index, row in enumerate(rows):
         if not isinstance(row, dict):
-            raise ValueError(f"Row {index} must be a dictionary.")
+            raise TypeError(f"Row {index} must be a dictionary.")
 
         if "mtu_start" not in row:
             raise ValueError(f"Row {index} is missing 'mtu_start'.")
@@ -33,13 +34,9 @@ def validate_raw_data(data: dict) -> None:
 
         # Check timestamp format
         try:
-            datetime.fromisoformat(
-                row["mtu_start"].replace("Z", "+00:00")
-            )
+            datetime.fromisoformat(row["mtu_start"].replace("Z", "+00:00"))
         except (ValueError, AttributeError):
-            raise ValueError(
-                f"Row {index} has an invalid timestamp."
-            )
+            raise ValueError(f"Row {index} has an invalid timestamp.")
 
         price = row["price_eur_mwh"]
 
