@@ -9,15 +9,12 @@ def run_pipeline() -> None:
     print("Pipeline is running...")
 
     # Extract the data
-    print("Extracting data...")
     data = extract_data()
 
     # Validate the raw data
-    print("Validating the extracted data...")
     validate_raw_data(data)
 
     # Transform the data
-    print("Transforming the data...")
     transformed_data = transform_data(data)
 
     # Load the data into SQLite
