@@ -14,7 +14,7 @@ def load_data(rows: list[dict]) -> None:
         connection.execute("""
             CREATE TABLE IF NOT EXISTS electricity_prices (
                 time_start TEXT PRIMARY KEY,
-                price_eur_mwh READ
+                price_eur_mwh REAL
             )
         """)
         # ... and insert the data into the table
